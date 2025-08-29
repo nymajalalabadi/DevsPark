@@ -1,6 +1,6 @@
 namespace DevsPark.MVVM.Pages;
 
-public partial class TemplateView : ContentPage
+public partial class TemplateView : ContentView
 {
 	public TemplateView()
 	{

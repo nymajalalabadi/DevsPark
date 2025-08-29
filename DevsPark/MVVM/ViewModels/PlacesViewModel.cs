@@ -105,7 +105,7 @@ namespace DevsPark.MVVM.ViewModels
 
         public void SetCurrentPlace(string name)
         {
-            currentPlace = places.Where(x => x.Name == name).FirstOrDefault();
+            CurrentPlace = places.Where(x => x.Name == name).FirstOrDefault();
         }
 
         [RelayCommand]
@@ -117,7 +117,7 @@ namespace DevsPark.MVVM.ViewModels
         [RelayCommand]
         public Task OpenFlyout()
         {
-            isFlyoutOpen = true;
+            IsFlyoutOpen = true;
             return Task.CompletedTask;
         }
 
@@ -125,7 +125,7 @@ namespace DevsPark.MVVM.ViewModels
         public async Task ShowOffers()
         {
 
-            isFlyoutOpen = true;
+            IsFlyoutOpen = true;
             throw new NotImplementedException();
         }
 
