@@ -12,6 +12,44 @@
     xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
     xmlns:utilities="clr-namespace:DevsPark.Utilities">
 
+    <Shell.FlyoutIcon>
+        <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Logo}"
+                    Color="{StaticResource IconColor}" />
+    </Shell.FlyoutIcon>
+
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="Black" HeightRequest="150">
+            <Image Source="park.jpg" Aspect="AspectFit" Opacity=".5"/>
+            <Label
+                FontFamily="KanitB"
+                Text="Devs Park"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="Large"
+                TextColor="White" />
+        </Grid>
+    </Shell.FlyoutHeader>
+
+
+    <Shell.FlyoutFooter>
+        <Grid Padding="15" BackgroundColor="{StaticResource Footer}" HeightRequest="100" RowDefinitions="*, *">
+            <Label Grid.Row="0"
+                FontAttributes="Bold"
+                Text="Developed by Nyma"
+                HorizontalOptions="Center"
+                TextColor="{StaticResource Gray600}" />
+
+            <Label Grid.Row="1"
+                   FontAttributes="Bold"
+                   FontSize="25"
+                   Text="All rights reserved"
+                   HorizontalOptions="Center"
+                   TextColor="{StaticResource Gray600}" />
+        </Grid>
+    </Shell.FlyoutFooter>
+
 
     <FlyoutItem Title="Desert Mirage">
         

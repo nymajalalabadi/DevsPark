@@ -29,5 +29,10 @@ namespace DevsPark.Utilities
         public const string Oasis_pools = "\ue813";
         public const string Oasis_fun = "\ue814";
         public const string Beach_attractions = "\ue815";
+        public const string Logo = "\ue816";
+        public const string Help = "\ue802";
+        public const string Search = "\ue817";
+        public const string Offer = "\ue818";
+        public const string Back = "\ue81a";
     }
 }
