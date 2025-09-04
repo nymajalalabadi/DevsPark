@@ -114,6 +114,7 @@ namespace DevsPark.MVVM.ViewModels
             Uri uri = new Uri("https://courses.devs.school");
             await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         }
+
         [RelayCommand]
         public Task OpenFlyout()
         {
