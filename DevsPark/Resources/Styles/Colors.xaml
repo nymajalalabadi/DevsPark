@@ -55,6 +55,6 @@
 
     <Color x:Key="Footer">#E9ECEF</Color>
     <Color x:Key="BGColor">#F6F4F5</Color>
-    <Color x:Key="IconColor">#000000</Color>
+    <Color x:Key="IconColor">#FFF</Color>
     
 </ResourceDictionary>

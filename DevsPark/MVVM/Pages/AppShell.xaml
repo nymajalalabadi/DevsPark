@@ -10,7 +10,17 @@
     xmlns:nightAdventures="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.NightAdventures"
     xmlns:oasisFun="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.OasisFun"
     xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
-    xmlns:utilities="clr-namespace:DevsPark.Utilities">
+    xmlns:utilities="clr-namespace:DevsPark.Utilities"
+    FlyoutHeaderBehavior="CollapseOnScroll"
+    FlyoutBackgroundImage="park_background.png"
+    FlyoutBackgroundImageAspect="AspectFill">
+
+    <!--<Shell.FlyoutBackdrop>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#8A2387" Offset="0.1" />
+            <GradientStop Color="#E94057" Offset="0.6" />
+        </LinearGradientBrush>
+    </Shell.FlyoutBackdrop>-->
 
     <Shell.FlyoutIcon>
         <FontImageSource
@@ -50,8 +60,42 @@
         </Grid>
     </Shell.FlyoutFooter>
 
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions=".2*, .8*" HeightRequest="75" RowSpacing="0">
+                
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        
+                        <VisualStateGroup x:Name="CommonStates">
+                            
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter TargetName="background" Property="Rectangle.Fill" Value="White"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                            
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter TargetName="background" Property="Rectangle.Fill" Value="Black"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                            
+                        </VisualStateGroup>
+                        
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
 
-    <FlyoutItem Title="Desert Mirage">
+                <Image Grid.Column="0" Source="{Binding FlyoutIcon}" HeightRequest="30" WidthRequest="30" VerticalOptions="Center"/>
+                <Label Grid.Column="1" Margin="20,0,0,0" FontSize="17" Text="{Binding Title}" TextColor="White" VerticalOptions="Center" />
+                <Rectangle x:Name="background" Grid.ColumnSpan="2" Fill="White" Opacity=".1" />
+                
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+
+    <FlyoutItem Title="Desert Mirage" >
         
         <FlyoutItem.Icon>
             <FontImageSource
