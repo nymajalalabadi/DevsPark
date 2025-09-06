@@ -14,7 +14,7 @@ namespace DevsPark
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(_serviceProvider.GetRequiredService<AppShell>());
+            return new Window(_serviceProvider.GetRequiredService<AppShellTabs>());
         }
     }
 }

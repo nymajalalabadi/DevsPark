@@ -73,6 +73,9 @@
 	  <MauiXaml Update="MVVM\Pages\AppShell.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Pages\AppShellTabs.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Pages\DesertMirage\NightAdventures\NightDuneBuggy.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

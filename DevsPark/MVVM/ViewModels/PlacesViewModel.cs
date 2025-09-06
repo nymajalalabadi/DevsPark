@@ -116,10 +116,9 @@ namespace DevsPark.MVVM.ViewModels
         }
 
         [RelayCommand]
-        public Task OpenFlyout()
+        public async Task OpenFlyout()
         {
-            IsFlyoutOpen = true;
-            return Task.CompletedTask;
+            Shell.Current.FlyoutIsPresented = true;
         }
 
         [RelayCommand]
