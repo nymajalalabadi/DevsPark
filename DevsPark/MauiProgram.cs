@@ -1,4 +1,5 @@
-﻿using DevsPark.MVVM.Pages.DesertMirage.NightAdventures;
+﻿using DevsPark.MVVM.Pages;
+using DevsPark.MVVM.Pages.DesertMirage.NightAdventures;
 using DevsPark.MVVM.Pages.DesertMirage.OasisFun;
 using DevsPark.MVVM.Pages.Frozen.IcyTreats;
 using DevsPark.MVVM.Pages.Frozen.SnowActivities;
@@ -41,6 +42,8 @@ namespace DevsPark
             builder.Services.AddTransient<WavePool>();
             builder.Services.AddTransient<AnimalShows>();
             builder.Services.AddTransient<ZipLines>();
+
+            builder.Services.AddTransient<AppShell>();
 
             builder.Services.AddTransient<PlacesViewModel>();
 

@@ -63,40 +63,74 @@
     <Shell.ItemTemplate>
         <DataTemplate>
             <Grid ColumnDefinitions=".2*, .8*" HeightRequest="75" RowSpacing="0">
-                
+
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroupList>
-                        
+
                         <VisualStateGroup x:Name="CommonStates">
-                            
+
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
                                     <Setter TargetName="background" Property="Rectangle.Fill" Value="White"/>
                                 </VisualState.Setters>
                             </VisualState>
-                            
+
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
                                     <Setter TargetName="background" Property="Rectangle.Fill" Value="Black"/>
                                 </VisualState.Setters>
                             </VisualState>
-                            
+
                         </VisualStateGroup>
-                        
+
                     </VisualStateGroupList>
                 </VisualStateManager.VisualStateGroups>
 
                 <Image Grid.Column="0" Source="{Binding FlyoutIcon}" HeightRequest="30" WidthRequest="30" VerticalOptions="Center"/>
                 <Label Grid.Column="1" Margin="20,0,0,0" FontSize="17" Text="{Binding Title}" TextColor="White" VerticalOptions="Center" />
                 <Rectangle x:Name="background" Grid.ColumnSpan="2" Fill="White" Opacity=".1" />
-                
+
             </Grid>
         </DataTemplate>
     </Shell.ItemTemplate>
 
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions=".2*, .8*" HeightRequest="75" RowSpacing="0">
+
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+
+                        <VisualStateGroup x:Name="CommonStates">
+
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter TargetName="background" Property="Rectangle.Fill" Value="White"/>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter TargetName="background" Property="Rectangle.Fill" Value="Black"/>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+
+                <Image Grid.Column="0" Source="{Binding Icon}" HeightRequest="30" WidthRequest="30" VerticalOptions="Center"/>
+                <Label Grid.Column="1" Margin="20,0,0,0" FontSize="17" Text="{Binding Text}" TextColor="White" VerticalOptions="Center" />
+                <Rectangle x:Name="background" Grid.ColumnSpan="2" Fill="White" Opacity=".1" />
+
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
 
     <FlyoutItem Title="Desert Mirage" >
-        
+
         <FlyoutItem.Icon>
             <FontImageSource
                 FontFamily="Icons"
@@ -105,14 +139,14 @@
         </FlyoutItem.Icon>
 
         <Tab Title="Night Adventures">
-            
+
             <Tab.Icon>
                 <FontImageSource
                     FontFamily="Icons"
                     Glyph="{x:Static utilities:IconFont.Night_adventures}"
                     Color="{StaticResource IconColor}" />
             </Tab.Icon>
-            
+
             <ShellContent Title="Night Dune Buggy" ContentTemplate="{DataTemplate nightAdventures:NightDuneBuggy}">
                 <ShellContent.Icon>
                     <FontImageSource
@@ -121,7 +155,7 @@
                             Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
             <ShellContent Title="Star Gazing" ContentTemplate="{DataTemplate nightAdventures:StarGazing}">
                 <ShellContent.Icon>
                     <FontImageSource
@@ -130,18 +164,18 @@
                              Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
         </Tab>
 
         <Tab Title="Oasis Fun">
-            
+
             <Tab.Icon>
                 <FontImageSource
                     FontFamily="Icons"
                     Glyph="{x:Static utilities:IconFont.Oasis_fun}"
                     Color="{StaticResource IconColor}" />
             </Tab.Icon>
-            
+
             <ShellContent Title="Camel Rides" ContentTemplate="{DataTemplate oasisFun:CamelRides}">
                 <ShellContent.Icon>
                     <FontImageSource
@@ -150,7 +184,7 @@
                         Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
             <ShellContent Title="Oasis Pools" ContentTemplate="{DataTemplate oasisFun:OasisPools}">
                 <ShellContent.Icon>
                     <FontImageSource
@@ -159,14 +193,14 @@
                             Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
         </Tab>
-        
+
     </FlyoutItem>
 
 
     <FlyoutItem Title="Frozen Kingdom">
-        
+
         <FlyoutItem.Icon>
             <FontImageSource
                     FontFamily="Icons"
@@ -190,7 +224,7 @@
                 Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
             <ShellContent Title="Ice Cream World" ContentTemplate="{DataTemplate icyTreats:IceCreamWorld}">
                 <ShellContent.Icon>
                     <FontImageSource
@@ -199,7 +233,7 @@
                 Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
         </Tab>
 
         <Tab Title="Snow Activities">
@@ -219,7 +253,7 @@
                 Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
             <ShellContent Title="Snowboarding" ContentTemplate="{DataTemplate snowActivities:Snowboarding}">
                 <ShellContent.Icon>
                     <FontImageSource
@@ -228,9 +262,9 @@
                 Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
         </Tab>
-        
+
     </FlyoutItem>
 
     <FlyoutItem Title="Tropical Paradise">
@@ -242,14 +276,14 @@
         </FlyoutItem.Icon>
 
         <Tab Title="Beach Attractions">
-            
+
             <Tab.Icon>
                 <FontImageSource
                     FontFamily="Icons"
                     Glyph="{x:Static utilities:IconFont.Beach_attractions}"
                     Color="{StaticResource IconColor}" />
             </Tab.Icon>
-            
+
             <ShellContent Title="Surf Lessons" ContentTemplate="{DataTemplate beachAttractions:SurfLessons}">
                 <ShellContent.Icon>
                     <FontImageSource
@@ -258,7 +292,7 @@
                                 Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
             <ShellContent Title="Wave Pool" ContentTemplate="{DataTemplate beachAttractions:WavePool}">
                 <ShellContent.Icon>
                     <FontImageSource
@@ -267,18 +301,18 @@
                                 Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
         </Tab>
 
         <Tab Title="Jungle Adventures">
-            
+
             <Tab.Icon>
                 <FontImageSource
                     FontFamily="Icons"
                     Glyph="{x:Static utilities:IconFont.Jungle_adventures}"
                     Color="{StaticResource IconColor}" />
             </Tab.Icon>
-            
+
             <ShellContent Title="Animal Shows" ContentTemplate="{DataTemplate jungleAdventures:AnimalShows}">
                 <ShellContent.Icon>
                     <FontImageSource
@@ -287,7 +321,7 @@
                                 Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
             <ShellContent Title="Zip Lines" ContentTemplate="{DataTemplate jungleAdventures:ZipLines}">
                 <ShellContent.Icon>
                     <FontImageSource
@@ -296,9 +330,19 @@
                                 Color="{StaticResource IconColor}" />
                 </ShellContent.Icon>
             </ShellContent>
-            
+
         </Tab>
 
     </FlyoutItem>
+
+    <MenuItem Text="Help" Command="{Binding HelpCommand}">
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Help}"
+                Color="{StaticResource IconColor}" />
+        </MenuItem.IconImageSource>
+    </MenuItem>
+
 
 </Shell>
