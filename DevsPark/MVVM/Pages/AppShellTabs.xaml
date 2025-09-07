@@ -11,8 +11,18 @@
     xmlns:oasisFun="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.OasisFun"
     xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
     xmlns:utilities="clr-namespace:DevsPark.Utilities">
-    
-    
+
+    <Shell.Resources>
+        <Style TargetType="TabBar">
+            <Setter Property="Shell.TabBarBackgroundColor" Value="#1D1F24" />
+            <Setter Property="Shell.TabBarDisabledColor" Value="#1D1F24" />
+            <Setter Property="Shell.TabBarForegroundColor" Value="Yellow" />
+            <Setter Property="Shell.TabBarTitleColor" Value="#9E86FF" />
+            <Setter Property="Shell.TabBarUnselectedColor" Value="#555A62" />
+        </Style>
+    </Shell.Resources>
+
+
 
     <TabBar Title="Desert Mirage" >
 
