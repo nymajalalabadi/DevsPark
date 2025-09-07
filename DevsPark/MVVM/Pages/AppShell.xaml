@@ -11,9 +11,13 @@
     xmlns:oasisFun="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.OasisFun"
     xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
     xmlns:utilities="clr-namespace:DevsPark.Utilities"
+    BackgroundColor="#1D1F24"
     FlyoutHeaderBehavior="CollapseOnScroll"
     FlyoutBackgroundImage="park_background.png"
-    FlyoutBackgroundImageAspect="AspectFill">
+    FlyoutBackgroundImageAspect="AspectFill"
+    Shell.TitleColor="#ECE7FF"
+    Shell.ForegroundColor="#C900EA"
+    Shell.UnselectedColor="#545454">
 
     <!--<Shell.FlyoutBackdrop>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
