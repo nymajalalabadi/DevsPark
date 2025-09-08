@@ -26,6 +26,19 @@
         </LinearGradientBrush>
     </Shell.FlyoutBackdrop>-->
 
+    <Shell.TitleView>
+        <Grid ColumnDefinitions=".8*, .2*">
+            <Image Grid.Column="0" Source="logo.png" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Label Grid.Column="1"
+                   FontFamily="Icons"
+                   Text="{x:Static utilities:IconFont.Search}"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   TextColor="#929292"
+                   FontSize="20"/>
+        </Grid>
+    </Shell.TitleView>
+
     <Shell.FlyoutIcon>
         <FontImageSource
                     FontFamily="Icons"
