@@ -124,9 +124,8 @@ namespace DevsPark.MVVM.ViewModels
         [RelayCommand]
         public async Task ShowOffers()
         {
-
-            IsFlyoutOpen = true;
-            throw new NotImplementedException();
+            await Shell.Current.GoToAsync("//FrozenDrinks");
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         [RelayCommand]

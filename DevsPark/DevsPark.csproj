@@ -88,6 +88,9 @@
 	  <MauiXaml Update="MVVM\Pages\DesertMirage\OasisFun\OasisPools.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Pages\FeaturedView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Pages\Frozen\IcyTreats\FrozenDrinksBar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -10,11 +10,18 @@ namespace DevsPark
         {
             _serviceProvider = serviceProvider;
             InitializeComponent();
+
+            RegisterRoutes();
         }
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
             return new Window(_serviceProvider.GetRequiredService<AppShell>());
+        }
+
+        private void RegisterRoutes()
+        {
+            Routing.RegisterRoute("//featuredView", typeof(FeaturedView));
         }
     }
 }
