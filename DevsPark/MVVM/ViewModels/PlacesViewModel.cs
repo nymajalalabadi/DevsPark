@@ -124,7 +124,16 @@ namespace DevsPark.MVVM.ViewModels
         [RelayCommand]
         public async Task ShowOffers()
         {
-            await Shell.Current.GoToAsync("//FrozenDrinks");
+            //await Shell.Current.GoToAsync("//FrozenDrinks");
+
+            //await Shell.Current.GoToAsync("//frozenDrinks");
+            //await Shell.Current.GoToAsync("details");
+
+            await Shell.Current.GoToAsync("featuredView");
+            await Shell.Current.GoToAsync("offersView");
+
+            await Shell.Current.GoToAsync("..");
+
             Shell.Current.FlyoutIsPresented = false;
         }
 

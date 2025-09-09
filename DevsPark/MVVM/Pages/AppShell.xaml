@@ -242,7 +242,7 @@
                 </ShellContent.Icon>
             </ShellContent>
 
-            <ShellContent Title="Ice Cream World" ContentTemplate="{DataTemplate icyTreats:IceCreamWorld}" Route="iceCreamWorld">
+            <ShellContent Title="Ice Cream World" ContentTemplate="{DataTemplate icyTreats:IceCreamWorld}" Route="iceCream">
                 <ShellContent.Icon>
                     <FontImageSource
                 FontFamily="Icons"

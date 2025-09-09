@@ -42,11 +42,16 @@ namespace DevsPark
             builder.Services.AddTransient<WavePool>();
             builder.Services.AddTransient<AnimalShows>();
             builder.Services.AddTransient<ZipLines>();
+            builder.Services.AddTransient<OffersView>();
+            builder.Services.AddTransient<FeaturedView>();
 
             builder.Services.AddTransient<AppShell>();
             builder.Services.AddTransient<AppShellTabs>();
 
             builder.Services.AddTransient<PlacesViewModel>();
+            builder.Services.AddTransient<OffersViewModel>();
+            builder.Services.AddTransient<FeaturedViewModel>();
+
 
             return builder.Build();
         }

@@ -21,7 +21,11 @@ namespace DevsPark
 
         private void RegisterRoutes()
         {
-            Routing.RegisterRoute("//featuredView", typeof(FeaturedView));
+            Routing.RegisterRoute("featuredView", typeof(FeaturedView));
+            Routing.RegisterRoute("offersView", typeof(OffersView));
+
+            //Routing.RegisterRoute("frozenDrinks/details", typeof(FeaturedView));
+            //Routing.RegisterRoute("creamWorld/details", typeof(OffersView));
         }
     }
 }
