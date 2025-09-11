@@ -11,10 +11,12 @@
     xmlns:oasisFun="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.OasisFun"
     xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
     xmlns:utilities="clr-namespace:DevsPark.Utilities"
+    xmlns:pages="clr-namespace:DevsPark.MVVM.Pages"
     BackgroundColor="#1D1F24"
-    FlyoutHeaderBehavior="CollapseOnScroll"
+    FlyoutHeaderBehavior="Scroll"
     FlyoutBackgroundImage="park_background.png"
     FlyoutBackgroundImageAspect="AspectFill"
+    FlyoutIsPresented="{Binding isFlyoutOpen}"
     Shell.TitleColor="#ECE7FF"
     Shell.ForegroundColor="#C900EA"
     Shell.UnselectedColor="#545454">
@@ -35,7 +37,10 @@
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    TextColor="#929292"
-                   FontSize="20"/>
+                   FontSize="20" />
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding SearchCommand}" />
+            </Label.GestureRecognizers>
         </Grid>
     </Shell.TitleView>
 
@@ -351,6 +356,9 @@
         </Tab>
 
     </FlyoutItem>
+
+    <ShellContent Title="Search" Route="search" 
+                  ContentTemplate="{DataTemplate pages:SearchView}" FlyoutItemIsVisible="False" />
 
     <MenuItem Text="Help" Command="{Binding HelpCommand}">
         <MenuItem.IconImageSource>

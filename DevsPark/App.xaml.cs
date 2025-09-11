@@ -9,6 +9,7 @@ namespace DevsPark
         public App(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
+
             InitializeComponent();
 
             RegisterRoutes();
@@ -23,6 +24,7 @@ namespace DevsPark
         {
             Routing.RegisterRoute("featuredView", typeof(FeaturedView));
             Routing.RegisterRoute("offersView", typeof(OffersView));
+            //Routing.RegisterRoute("searchView", typeof(SearchView));
 
             //Routing.RegisterRoute("frozenDrinks/details", typeof(FeaturedView));
             //Routing.RegisterRoute("creamWorld/details", typeof(OffersView));
