@@ -6,6 +6,7 @@ using DevsPark.MVVM.Pages.Frozen.SnowActivities;
 using DevsPark.MVVM.Pages.TropicalParadise.BeachAttractions;
 using DevsPark.MVVM.Pages.TropicalParadise.JungleAdventures;
 using DevsPark.MVVM.ViewModels;
+using DevsPark.Services.OffersService;
 using Microsoft.Extensions.Logging;
 
 namespace DevsPark
@@ -47,6 +48,8 @@ namespace DevsPark
 
             builder.Services.AddTransient<AppShell>();
             builder.Services.AddTransient<AppShellTabs>();
+
+            builder.Services.AddSingleton<OffersService>();
 
             builder.Services.AddTransient<PlacesViewModel>();
             builder.Services.AddTransient<OffersViewModel>();

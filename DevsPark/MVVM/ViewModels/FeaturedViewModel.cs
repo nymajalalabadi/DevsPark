@@ -47,16 +47,17 @@ namespace DevsPark.MVVM.ViewModels
         }
 
 
+        public List<FeaturedPromotion> Promos { get; set; }
+
+
         [ObservableProperty]
         FeaturedPromotion selectedItem;
-
-        public List<FeaturedPromotion> Promos { get; set; }
 
 
         [RelayCommand]
         public async Task SelectionChanged()
         {
-            await Shell.Current.GoToAsync($"offersView");
+            await Shell.Current.GoToAsync($"offersView?id={SelectedItem?.BusinessId}");
         }
     }
 }

@@ -11,10 +11,11 @@ using System.Threading.Tasks;
 
 namespace DevsPark.MVVM.ViewModels
 {
-    public partial class OffersViewModel : ObservableObject
+    //[QueryProperty("CompanyName", "name")]
+    public partial class OffersViewModel : ObservableObject, IQueryAttributable
     {
         private readonly OffersService offersService;
-
+         
         public OffersViewModel(OffersService _offersService)
         {
             offersService = _offersService;
@@ -23,13 +24,23 @@ namespace DevsPark.MVVM.ViewModels
         [ObservableProperty]
         ObservableCollection<Offer> offers;
 
+
+        [ObservableProperty]
         string companyName = "Company Name";
+
 
 
         [RelayCommand]
         public async Task Back()
         {
             await Shell.Current.DisplayAlert("Back pressed", "Back pressed", "OK");
+        }
+
+        public void ApplyQueryAttributes(IDictionary<string, object> query)
+        {
+            var companyId = query["id"].ToString();
+
+            offers = new ObservableCollection<Offer>(offersService.GetOffers(int.Parse(companyId)));
         }
     }
 }
