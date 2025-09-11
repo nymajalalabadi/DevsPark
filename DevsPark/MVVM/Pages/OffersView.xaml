@@ -3,7 +3,20 @@
     x:Class="DevsPark.MVVM.Pages.OffersView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:utilities="clr-namespace:DevsPark.Utilities"
     Title="OffersView">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding BackCommand}">
+            <BackButtonBehavior.IconOverride>
+                <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Back}"
+                Color="{StaticResource IconColor}" />
+            </BackButtonBehavior.IconOverride>
+        </BackButtonBehavior>
+    </Shell.BackButtonBehavior>
+
     <Grid RowDefinitions=".1*,.9*">
         <Label
             FontAttributes="Bold"

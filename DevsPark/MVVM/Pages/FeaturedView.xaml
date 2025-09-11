@@ -4,8 +4,10 @@
              x:Class="DevsPark.MVVM.Pages.FeaturedView"
              Title="FeaturedView"
              BackgroundColor="{StaticResource BGColor}">
+    
+    
 
-    <Grid RowDefinitions=".2*,.8*">
+        <Grid RowDefinitions=".2*,.8*">
         <Label
             FontSize="35"
             HorizontalTextAlignment="Center"
