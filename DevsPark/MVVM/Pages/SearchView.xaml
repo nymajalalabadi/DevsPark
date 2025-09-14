@@ -6,7 +6,32 @@
              Title="SearchView">
 
     <Shell.SearchHandler>
-        <search:OfferSearchHandler DisplayMemberName="OfferName" Placeholder="Search Offers" ShowsResults="True"/>
+        <search:OfferSearchHandler DisplayMemberName="OfferName" Placeholder="Search Offers"
+                                   ShowsResults="True" SearchBoxVisibility="Collapsible" Keyboard="Chat">
+
+            
+
+            <search:OfferSearchHandler.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions=".3*, .7*" RowDefinitions="*, 5">
+                        <Image Grid.Column="0" Grid.Row="0" Source="{Binding Image}" />
+                        <Label
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            FontSize="14"
+                            HorizontalOptions="Center"
+                            Text="{Binding OfferName}"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                        <Rectangle
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            Fill="#E0E0E0"/>
+                    </Grid>
+                </DataTemplate>
+            </search:OfferSearchHandler.ItemTemplate>
+            
+        </search:OfferSearchHandler>
     </Shell.SearchHandler>
     
 </ContentPage>
